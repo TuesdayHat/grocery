@@ -6,6 +6,7 @@ $(document).ready(function(){
     event.preventDefault();
     //debugger;
     var input = $("input#food").val();
+    $("#sortedList").empty();
 
     function addList (){
       $("#list").append("<li>" + input + "</li>")
@@ -17,9 +18,7 @@ $(document).ready(function(){
       var sorted = list.sort();
       sorted.forEach(function(item){
         item = item.toUpperCase();
-        $("#sortedList").empty();
         $("#sortedList").append("<li>" + item + "</li>")
-        //sorted.length = shopping.length;
       });
       $("#list").hide();
     }
